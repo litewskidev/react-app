@@ -28,7 +28,7 @@ const reducer = (state, action) => {
       return { ...state, searchString: action.payload };
     default:
       return state;
-  }
+  };
 };
 
 const store = createStore(

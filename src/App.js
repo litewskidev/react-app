@@ -4,7 +4,7 @@ import List from "./components/List/List";
 import SearchForm from "./components/SearchForm/SearchForm";
 
 const App = () => {
-  return (
+  return(
     <Container>
       <Hero />
       <SearchForm />

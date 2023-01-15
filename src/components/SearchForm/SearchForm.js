@@ -17,7 +17,7 @@ const SearchForm = () => {
     setSearchString('');
   };
 
-  return (
+  return(
     <form className={styles.SearchForm} onSubmit={handleSubmit}>
       <TextInput value={searchString} onChange={e => setSearchString(e.target.value)} placeholder="Search..." />
       <Button>

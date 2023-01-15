@@ -1,7 +1,7 @@
 import styles from './Card.module.scss';
 
 const Card = props => {
-  return (
+  return(
     <li className={styles.card}>{props.title}</li>
   );
 };
