@@ -1,0 +1,48 @@
+@import '../../styles/settings.scss';
+
+.nav {
+  background: darken($color-dark, 3%);
+  width: 100%;
+}
+
+.box {
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 22px;
+  margin: 0 auto;
+}
+
+.icon {
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  padding: $base-size;
+
+  i {
+    color: $color-light;
+
+    &:hover {
+      color: $color-success;
+    }
+  }
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+
+  li a {
+    color: $color-light;
+    text-decoration: none;
+    font-weight: bold;
+    padding: $base-size;
+
+    &:hover {
+      color: $color-success;
+    }
+  }
+}
