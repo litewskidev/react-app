@@ -35,6 +35,10 @@
   justify-content: space-between;
   list-style: none;
 
+  .linkActive {
+    color: $color-warning;
+  }
+
   li a {
     color: $color-light;
     text-decoration: none;
