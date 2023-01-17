@@ -15,6 +15,9 @@ export const getColumnsByList = ({ columns }, listId) => columns.filter((column)
 );
 export const getAllLists = ({lists}) => lists;
 
+export const getFavoriteCard = ({cards}) => cards.filter(card => card.isFavorite === true
+);
+
 
 // ACTION CREATORS
 export const addColumn = payload => ({ type: 'ADD_COLUMN', payload }
@@ -25,17 +28,21 @@ export const Search = payload => ({ type: 'UPDATE_SEARCH', payload }
 );
 export const addList = payload => ({type: 'ADD_LIST', payload}
 );
+export const toggleFavorite = payload => ({type: 'TOGGLE_FAVORITE', payload}
+);
 
 const reducer = (state, action) => {
   switch(action.type) {
     case 'ADD_COLUMN':
-      return { ...state, columns: [...state.columns, { ...action.payload, id: shortid() }]};
+      return { ...state, columns: [...state.columns, { ...action.payload, id: shortid() }] };
     case 'ADD_CARD':
-      return { ...state, cards: [...state.cards, { ...action.payload, id: shortid() }]};
+      return { ...state, cards: [...state.cards, { ...action.payload, id: shortid() }] };
     case 'UPDATE_SEARCH':
       return { ...state, searchString: action.payload };
     case 'ADD_LIST':
-      return { ...state, lists: [...state.lists, {...action.payload, id: shortid()}]};
+      return { ...state, lists: [...state.lists, {...action.payload, id: shortid() }] };
+    case 'TOGGLE_FAVORITE':
+      return { ...state, cards: state.cards.map(card => (card.id === action.payload) ? { ...card, isFavorite: !card.isFavorite } : card) };
     default:
       return state;
   };

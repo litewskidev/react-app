@@ -12,3 +12,14 @@
     font-weight: bold;
 }
 
+.cardButton {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+.active {
+  color: $color-warning;
+  border: solid 1px;
+  border-radius: 50%;
+}
