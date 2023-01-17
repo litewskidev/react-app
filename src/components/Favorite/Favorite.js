@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { getFavoriteCard } from '../../redux/store';
+import { getFavoriteCard } from '../../redux/cardsRedux';
 import Card from '../Card/Card';
 import PageTitle from '../PageTitle/PageTitle';
 import styles from './Favorite.module.scss';
@@ -8,10 +8,11 @@ const Favorite = () => {
 
   const cards = useSelector(getFavoriteCard);
   if(!cards.length)
-        return (
-            <div className={styles.no_favorite_cards}>Sorry, no favorite cards!
-            </div>
-        );
+    return(
+      <div className={styles.no_favorite_cards}>
+        Sorry, no favorite cards!
+      </div>
+    );
 
   return(
     <div>
