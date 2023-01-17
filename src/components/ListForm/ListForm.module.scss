@@ -1,14 +1,10 @@
-.columnForm {
+.listForm {
   text-align: center;
   padding: 10px;
-
-  span {
-    margin: 0 5px;
-  }
 }
 
 @media (max-width: 600px) {
-  .columnForm {
+  .listForm {
   display: flex;
   flex-direction: column;
   }

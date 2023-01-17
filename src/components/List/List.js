@@ -20,7 +20,9 @@ const List = () => {
         <h2 className={styles.title}>{listData.title}</h2>
         </header>
         <p className={styles.description}>{listData.description}</p>
-        <SearchForm />
+        <div className={styles.searchForm}>
+          <SearchForm />
+        </div>
         <section className={styles.columns}>
           {columns.map(column =>
           <Column key={column.id} {...column} />
