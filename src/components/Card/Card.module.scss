@@ -16,6 +16,20 @@
   background-color: inherit;
   border: none;
   cursor: pointer;
+
+  &:hover {
+    color: $color-warning;
+  }
+}
+
+.removeButton {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    color: $color-dark;
+  }
 }
 
 .active {

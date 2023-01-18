@@ -11,7 +11,7 @@ const subreducers = {
   columns: columnsReducer,
   cards: cardsReducer,
   searchString: searchReducer
-}
+};
 const reducer = combineReducers(subreducers);
 
 
